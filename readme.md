@@ -11,10 +11,10 @@ Most used on debbuging, the builtin method `repr()` return an official string th
 class MyClass:
     
     def __init__(self, param_1, param_n):
-        self.p1 = param_1
-        self.pN = param_n
+        self.p_1 = param_1
+        self.p_n = param_n
 
     def __repr__(self):
-        return "MyClass(param_1, param_n)
+        return "MyClass(param_1, param_n)"
 
 ```
