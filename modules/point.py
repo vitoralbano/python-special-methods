@@ -5,10 +5,10 @@ class Point:
         self.y = y
 
     def __repr__(self):
-        return f"{self.__class__.__name__}({self.x}, {self.y})"
+        return f"{self.__class__.__name__}(x={self.x}, y={self.y})"
 
 
 if (__name__ == "__main__"):
     print("# repr()")
-    point = Point(20, 9)
+    point = Point(x=20, y=9)
     print(f"\t{repr(point)}")
