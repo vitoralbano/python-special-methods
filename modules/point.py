@@ -10,11 +10,20 @@ class Point:
     def __str__(self):
         return f"Point located at X {self.x} and Y {self.y}"
 
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+
+
 
 if (__name__ == "__main__"):
-    print("# repr()")
+    print("# __repr__()")
     point = Point(x=20, y=9)
     print(f"{repr(point)}")
 
-    print("\n# str()")
+    print("\n# __str__()")
     print(point)
+
+    print("\n# __add__()")
+    point_2 = Point(x=6, 12)
+    print(f"{repr(point)} + {repr(point_2)}")
+    print(f"{repr(point + point_2)}")
