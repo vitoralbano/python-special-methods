@@ -3,7 +3,7 @@ This repository is part of my studies about Python's special methods and data mo
 
 # Simple customizations
 
-## \_\_repr_\_
+## `__repr__`
 Most used on debugging, the built-in method `repr()` return an official string that represents the object, in best practices, this string should represent how to recreate that object. 
 
 > code example: 
@@ -21,7 +21,7 @@ class MyClass:
 
 ```
 
-## \_\_str_\_
+## `__str__`
 As `repr()` built-in function, `str()` return a `string`, but an informal representation without the commitment of be an valid python expression.
 
 ```python
@@ -37,10 +37,10 @@ class MyClass:
 ```
 
 # Emulating numeric types
-## \_\_add_\_
-Used for arithmetic oprations, the method `\_\_add\_\_` allows to sum two instances of the same class
+## `__add__`
+Used for arithmetic operations, the method `__add__` allows to sum two instances of the same class or classes that inherit common attributes.
 
-As the commited code, lets show a simple example:
+As the commited code, lets see it with simple example:
 ```python
 class Point:
 
@@ -50,9 +50,6 @@ class Point:
 
     def __repr__(self):
         return f"{self.__class__.__name__}(x={self.x}, y={self.y})"
-    
-    def __str__(self):
-        return f"Point located at X {self.x} and Y {self.y}"
 
     def __add__(self, other):
         return Point(self.x + other.x, self.y + other.y)
