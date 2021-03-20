@@ -40,7 +40,7 @@ class MyClass:
 ## `__add__`
 Used for arithmetic operations, the method `__add__` allows to sum two instances of the same class or classes that inherit common attributes.
 
-As the commited code, lets see it with simple example:
+As the commited code, lets see it with a simple example:
 ```python
 class Point:
 
